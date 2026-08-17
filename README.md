@@ -2,11 +2,7 @@
 
 **League-specific NBA fantasy analysis from a public Sleeper league—deterministic scoring first, optional Ollama Cloud narration second.**
 
-Built for **PeddieHacks 2026 · Sports track**.
-
 CourtIQ exists because a generic player list cannot answer a league-specific question: does this available player help under *this* league's scoring? CourtIQ imports a public Sleeper NBA league, interprets the supported scoring setup, removes players already rostered in that league, and produces deterministic ranked boards and a constrained one-for-one trade candidate.
-
-No live deployment, video, or verified product screenshot is included in this repository.
 
 ## What CourtIQ does
 
@@ -109,10 +105,6 @@ The verification scripts exercise scoring divergence, turnover inversion, suppor
 ## Sleeper data, cache, and freshness
 
 CourtIQ uses the public Sleeper API—no Sleeper credential or second data provider is required. It reads league, roster, user, player dictionary, regular-season stats, weekly stats, and trending-add endpoints. The app keeps an in-process and disk cache in `.cache/`; `.cache/` is regenerated on demand and is ignored by Git. Network requests time out defensively, and missing/failed narration falls back locally.
-
-## Contributors
-
-Contributor roles are not documented in the repository, so this README does not infer them. Use the Git history for authorship.
 
 ## What's next
 
